@@ -1,0 +1,47 @@
+<p id="notice" class="mx-auto"><%= notice %></p>
+<div class="card col-6 mb-3 bg-light mx-auto text-end">
+  <div class="card-body">
+    <h4 class="card-title border-bottom border-secondary text-success">You are viewing <%= @friend.First_name.upcase + " " + @friend.Last_name.upcase  %>'s information </h4>
+    <p>
+      <strong>First name:</strong>
+      <%= @friend.First_name %>
+    </p>
+
+    <p>
+      <strong>Last name:</strong>
+      <%= @friend.Last_name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @friend.Email %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <%= @friend.Phone %>
+    </p>
+
+    <p>
+      <strong>Country:</strong>
+      <%= @friend.Country %>
+    </p>
+  </div>
+  <div class="card-footer row no-gutters text-center">
+    <div class="col-4">
+      <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-outline-secondary text-dark py-0" %>
+    </div>
+    <div class="col-4">
+      <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure you wnat to delete this friend?' }, class:"btn btn-outline-danger text-dark py-0 mx-2" %>
+    </div>
+    <div class="col-4">
+      <%= link_to 'Back', friends_path, class:"btn btn-outline-secondary text-dark py-0" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

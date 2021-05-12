@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LastApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="/app/assets/javascripts/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="/app/assets/javascripts/jquery-3.6.0.min.js"></script>
+    <script src="/app/assets/javascripts/bootstrap.bundle.js"></script>
+    <script src="/app/assets/javascripts/all.js"></script>
+  </head>
+
+  <body>
+    <%= render 'friends/header'%>
+
+    <div class="container mx-5">
+    <%= yield %>
+    </div>
+
+    <%= render 'friends/footer' %>
+  </body>
+</html>
